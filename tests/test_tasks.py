@@ -15,6 +15,5 @@ from tasks import add
     ],
 )
 def test_add(a, b, expected):
-
     result = add.delay(a, b)
     assert result.get(timeout=10) == expected
