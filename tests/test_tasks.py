@@ -1,5 +1,6 @@
 import pytest
 from tasks import add
+from _types import AddableT
 
 
 @pytest.mark.parametrize(
@@ -11,6 +12,6 @@ from tasks import add
         ([1, 2], [3, 4], [1, 2, 3, 4]),
     ],
 )
-def test_add(a, b, expected):
+def test_add(a: AddableT, b: AddableT, expected: AddableT):
     result = add.delay(a, b)
     assert result.get(timeout=10) == expected
