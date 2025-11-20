@@ -1,7 +1,4 @@
 import pytest
-import sys
-
-print(sys.path)
 from tasks import add
 
 
