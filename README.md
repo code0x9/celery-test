@@ -16,11 +16,18 @@ uv sync
 3. run worker
 
 ```sh
-uv run celery --app=tasks worker --loglevel=DEBUG
+uv run --env-file=.env celery --app=tasks worker --loglevel=DEBUG
 ```
 
 4. run test
 
 ```sh
-uv run python -m pytest
+uv run --env-file=.env python -m pytest
+```
+
+5. open flower web ui
+
+```sh
+uv run --env-file=.env celery flower
+open http://0.0.0.0:5555
 ```

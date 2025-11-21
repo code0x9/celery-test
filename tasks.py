@@ -1,9 +1,7 @@
 from celery import Celery
 from _types import AddableT
 
-app = Celery(
-    "tasks", backend="redis://localhost:6379/0", broker="redis://localhost:6379/0"
-)
+app = Celery("tasks")
 
 
 @app.task
