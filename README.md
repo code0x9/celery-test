@@ -31,3 +31,20 @@ uv run --env-file=.env python -m pytest
 uv run --env-file=.env celery flower
 open http://0.0.0.0:5555
 ```
+
+## temporal
+
+- quickstart: https://docs.temporal.io/develop/python/set-up-your-local-python
+- api: https://python.temporal.io/
+
+1. run worker
+
+```sh
+uv run temporal_worker.py
+```
+
+2. run client
+
+```sh
+uv run temporal_client.py 3 5
+```
