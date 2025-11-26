@@ -8,6 +8,7 @@ dependencies = [
     "redis>=7.1.0",
     "temporalio>=1.19.0",
 ]
+classifiers = ["Private :: Do Not Upload"]
 
 [dependency-groups]
 dev = [
